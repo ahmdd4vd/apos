@@ -52,15 +52,158 @@ See the [skills.sh documentation](https://www.skills.sh/docs) for the complete C
 
 ## Usage
 
-Once installed, an agent can load APOS when a task involves project governance and continuity, such as:
+### When to use APOS
 
-- planning or implementing software changes;
-- synchronizing documentation with validated code;
-- tracking tasks, ownership, and technical decisions;
-- auditing project drift; or
-- coordinating multiple agents or worktrees.
+Use APOS whenever a task can affect project intent, implementation structure, ownership, or durable project knowledge. Typical examples include:
 
-For manual use, mention APOS or ask the agent to follow the APOS workflow in your prompt. The skill guides the agent to inspect the actual project state, choose a risk-appropriate process, validate the result, update affected artifacts, and produce a final report.
+- planning or implementing a new feature;
+- fixing a bug that touches more than one file or component;
+- changing an API, database, authentication flow, deployment boundary, or shared component;
+- updating requirements, architecture documentation, or technical decisions;
+- coordinating multiple agents, branches, or worktrees;
+- investigating suspected documentation or project-state drift; or
+- preparing a release or major migration.
+
+For isolated typo fixes, formatting changes, or other low-risk edits, APOS uses a lightweight process rather than requiring a full project record.
+
+### Start a task with APOS
+
+After installing the skill, ask your coding agent to use APOS explicitly when you want predictable governance. For example:
+
+```text
+Use APOS for this task. Inspect the repository state first, classify the change, identify the relevant task and architecture decisions, implement the smallest safe change, run proportional validation, update affected project artifacts, and provide an APOS Report.
+```
+
+For a feature request, provide the desired outcome and ask APOS to preserve traceability:
+
+```text
+Use APOS to add email-based password reset. Review the existing goals, requirements, architecture, and decisions first. Create or update the relevant task, explain the impact and security considerations, implement the feature, run tests, update documentation and changelog entries that are materially affected, and report any follow-up work.
+```
+
+For an audit:
+
+```text
+Run an APOS health audit. Check for stale or unowned tasks, missing requirements, conflicting decisions, architecture drift, incomplete changelog entries, stale projections, and known issues without follow-up tasks. Report findings by severity with recommended next actions.
+```
+
+### APOS workflow
+
+APOS selects the smallest workflow that is safe for the change:
+
+| Change type | Typical examples | Workflow |
+| --- | --- | --- |
+| **Trivial** | Formatting, typo fixes, isolated documentation edits | Read, execute, validate, report |
+| **Routine** | Bug fixes, tests, small features, localized refactors | Read, analyze, plan, execute, validate, update state, report |
+| **Significant** | API, database, authentication, shared component, or product-behavior changes | Read, analyze, plan, impact check, execute, validate, update state, report |
+| **Critical** | Breaking changes, destructive migrations, security, permissions, billing, irreversible operations | Full impact analysis, explicit risks and rollback plan, authorization checks, execution, validation, and state updates |
+
+Do not skip repository inspection for non-trivial work. The agent should first check the current code, tests, configuration, and any existing `.apos/` artifacts before making assumptions.
+
+### Initialize project state
+
+If the repository already contains `.apos/`, read only the relevant files before changing the project. If it does not exist, create only the directories needed by the current task:
+
+```bash
+mkdir -p .apos/goals .apos/tasks .apos/decisions
+```
+
+Do not create every possible directory by default. A small project may begin with only a goal and a task; additional directories can be added when they become useful.
+
+A task record should normally include:
+
+- a stable ID and clear title;
+- owner, status, and priority;
+- dependencies and affected areas;
+- links to requirements, goals, or decisions; and
+- validation or acceptance criteria.
+
+Use the project’s existing conventions when they differ. APOS commonly recognizes the statuses `Backlog`, `Planned`, `In Progress`, `Review`, `Completed`, and `Archived`.
+
+### Keep documentation synchronized
+
+Update only the artifacts materially affected by the change. Avoid copying the same information into multiple files. As a default guide:
+
+| Change | Usually update |
+| --- | --- |
+| Small bug fix | Task and changelog, if the project maintains one |
+| New user-facing feature | Task, PRD or requirements, and changelog |
+| API or database change | Task, architecture/API documentation, migration notes, and changelog |
+| New technical direction | Decision record, architecture documentation, and task |
+| Durable technical discovery | Memory plus the relevant task or decision |
+| Worktree lifecycle change | Worktree registry, when one is active |
+| Concurrent agent ownership | Agent registry, when multiple agents are active |
+
+When implementation, documentation, and requirements disagree, do not silently choose one. APOS uses this order of precedence for current work:
+
+1. Validated code and runtime behavior;
+2. explicit architecture decisions;
+3. PRD and goals;
+4. tasks;
+5. changelog entries; and
+6. memory and durable discoveries.
+
+The conflict should be reported and the appropriate source document should be synchronized.
+
+### Review architecture and decisions
+
+Before changing a database, API, authentication flow, core service, shared component, deployment boundary, or public contract:
+
+1. Read the relevant architecture documentation.
+2. Search `.apos/decisions/` for prior solutions.
+3. Identify affected modules and dependencies.
+4. Describe breaking changes, migration needs, risks, and validation steps.
+5. Record a decision when the accepted technical direction changes.
+
+Do not silently override an accepted decision. If a new requirement conflicts with an existing decision, explain the conflict and recommend whether the decision, requirement, or implementation should change.
+
+### Validate and report
+
+Validation should match the risk of the change. Depending on the project, this may include unit tests, integration tests, type checking, linting, build verification, migration checks, security checks, or a manual smoke test.
+
+A normal APOS final report should contain:
+
+```markdown
+## APOS Report
+
+### Change
+- Summary:
+- Classification:
+- Task:
+
+### Validation
+- Checks run:
+- Result:
+
+### State updates
+- Updated artifacts:
+- Intentionally unchanged artifacts:
+
+### Risks and follow-up
+- Known risks:
+- Follow-up work:
+```
+
+For trivial changes, omit empty sections. For significant or critical changes, include impact analysis, migration or rollback notes, unresolved conflicts, and any required authorization or follow-up work.
+
+### Run a health audit
+
+Request an audit before a major release, after a long period of inactivity, or whenever project drift is suspected. APOS should inspect:
+
+- stale, blocked, or unowned tasks;
+- significant features without requirements;
+- decisions without affected scope;
+- architecture references to missing modules;
+- incomplete changelog entries;
+- stale or missing projections;
+- conflicting status or ownership metadata; and
+- known issues without follow-up tasks.
+
+Report findings by severity instead of inventing an opaque numeric score:
+
+- **Critical:** data loss, security, release, or severe integrity risk;
+- **High:** important architecture, ownership, or requirement mismatch;
+- **Medium:** meaningful maintenance or synchronization gap; and
+- **Low:** housekeeping or stale metadata.
 
 ## Supported project structure
 
