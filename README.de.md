@@ -133,11 +133,16 @@ Der vollständige Ablauf bleibt in [`skill/apos/SKILL.md`](./skill/apos/SKILL.md
 
 Die Skill-Installation und die Einführung von APOS im Projekt sind getrennte Schritte: zuerst `npx skills add` ausführen, danach `AGENTS.md`, `CLAUDE.md` und den minimalen `.apos/`-Zustand hinzufügen oder aktualisieren. Klären Sie bei einem leeren Projekt zuerst die Projektabsicht; prüfen und bewahren Sie bei einem bestehenden Projekt zuerst die vorhandenen Anweisungen.
 
-## Videoüberblick
+## Video overview
 
-Sehen Sie sich den [APOS-Videoüberblick](./docs/videos/apos-overview.mp4) an, um Repository Detection, Bootstrap Protocol, Start Protocol, Finish Protocol und die Agent-Integration zu verstehen.
+Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-[![APOS-Videoüberblick ansehen](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
+  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
+</video>
+
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## Dateien
 

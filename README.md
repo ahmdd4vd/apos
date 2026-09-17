@@ -271,6 +271,11 @@ Adopt project:  add/update AGENTS.md, CLAUDE.md, and minimum .apos/ state
 
 Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
+<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
+  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
+</video>
+
 [![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## Files

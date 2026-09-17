@@ -133,11 +133,16 @@ O fluxo completo permanece em [`skill/apos/SKILL.md`](./skill/apos/SKILL.md). No
 
 Instalar a skill e adotar o APOS no projeto são ações diferentes: primeiro execute `npx skills add` e depois adicione ou atualize `AGENTS.md`, `CLAUDE.md` e o estado mínimo de `.apos/`. Em um projeto vazio, faça isso depois de esclarecer a intenção; em um projeto existente, revise e preserve primeiro as instruções atuais.
 
-## Vídeo de visão geral
+## Video overview
 
-Assista ao [vídeo de visão geral do APOS](./docs/videos/apos-overview.mp4) para ver o fluxo de repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol e integração do agent.
+Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-[![Assistir ao vídeo de visão geral do APOS](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
+  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
+</video>
+
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## Arquivos
 

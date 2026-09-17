@@ -152,9 +152,14 @@ Jangan menyalin seluruh skill ke `AGENTS.md` atau `CLAUDE.md`. Pertahankan instr
 
 ## Video overview
 
-Lihat [video overview APOS](./docs/videos/apos-overview.mp4) untuk melihat alur repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, dan integrasi agent.
+Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-[![Tonton video overview APOS](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
+  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
+</video>
+
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## File
 

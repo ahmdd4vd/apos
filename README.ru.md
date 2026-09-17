@@ -133,11 +133,16 @@ Use APOS for this task. Inspect the repository state first, classify the change,
 
 Установка skill и принятие APOS в проекте — разные действия: сначала выполните `npx skills add`, затем добавьте или обновите `AGENTS.md`, `CLAUDE.md` и минимальное состояние `.apos/`. Для пустого проекта сделайте это после определения намерения проекта; для существующего сначала сохраните и проверьте текущие инструкции.
 
-## Видеообзор
+## Video overview
 
-Посмотрите [видеообзор APOS](./docs/videos/apos-overview.mp4), чтобы увидеть repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol и интеграцию агента.
+Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-[![Смотреть видеообзор APOS](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
+  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
+</video>
+
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## Файлы
 

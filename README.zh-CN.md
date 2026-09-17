@@ -133,11 +133,16 @@ Task 通常应包含稳定 ID、标题、负责人、状态、优先级、依赖
 
 安装 skill 与在项目中采用 APOS 是两个不同的动作：先运行 `npx skills add`，再添加或更新 `AGENTS.md`、`CLAUDE.md` 和最小 `.apos/` 状态。空项目应在明确项目意图后执行；已有项目应先检查并保留现有指令。
 
-## 视频概览
+## Video overview
 
-观看 [APOS 视频概览](./docs/videos/apos-overview.mp4)，了解 repository detection、Bootstrap Protocol、Start Protocol、Finish Protocol 和 agent 集成流程。
+Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-[![观看 APOS 视频概览](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
+  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
+  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
+</video>
+
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## 文件
 
