@@ -150,6 +150,12 @@ Project state: `.apos/`
 
 Jangan menyalin seluruh skill ke `AGENTS.md` atau `CLAUDE.md`. Pertahankan instruksi yang sudah ada dan tambahkan bagian APOS secara terpisah. Instalasi skill dan adopsi APOS adalah dua hal berbeda: instal skill melalui `npx skills add`, lalu integrasikan APOS ke project dengan file instruksi agent dan state `.apos/` minimum.
 
+## Video overview
+
+Lihat [video overview APOS](./docs/videos/apos-overview.mp4) untuk melihat alur repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, dan integrasi agent.
+
+[![Tonton video overview APOS](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+
 ## File
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — instruksi utama untuk coding agent.

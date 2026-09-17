@@ -267,6 +267,12 @@ Install skill:  npx skills add <skill-url>
 Adopt project:  add/update AGENTS.md, CLAUDE.md, and minimum .apos/ state
 ```
 
+## Video overview
+
+Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
+
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+
 ## Files
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — the main instructions loaded by coding agents.
