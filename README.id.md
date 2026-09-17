@@ -125,6 +125,31 @@ Gunakan severity **Critical**, **High**, **Medium**, dan **Low**, bukan numeric 
 9. Utamakan konsistensi tanpa birokrasi yang tidak perlu.
 10. Tinggalkan proyek agar mudah dipahami developer baru.
 
+## Integrasi instruksi agent
+
+Instalasi skill APOS tidak otomatis mengubah project. Agar agent selalu mengingat APOS, adopsikan APOS ke file instruksi project seperti `AGENTS.md` dan/atau `CLAUDE.md`.
+
+Simpan workflow lengkap di [`skill/apos/SKILL.md`](./skill/apos/SKILL.md), lalu tambahkan pengingat wajib yang ringkas:
+
+```markdown
+## APOS Governance
+
+This project uses APOS for project governance and continuity.
+
+For every non-trivial task:
+1. Inspect the repository and relevant `.apos/` state.
+2. Classify the change and create or update a task when required.
+3. Run proportional validation.
+4. Run the APOS Finish Protocol before reporting completion.
+5. Synchronize affected tasks, decisions, architecture, changelog, or memory.
+6. Provide an APOS Report.
+
+Full workflow: `skill/apos/SKILL.md`
+Project state: `.apos/`
+```
+
+Jangan menyalin seluruh skill ke `AGENTS.md` atau `CLAUDE.md`. Pertahankan instruksi yang sudah ada dan tambahkan bagian APOS secara terpisah. Instalasi skill dan adopsi APOS adalah dua hal berbeda: instal skill melalui `npx skills add`, lalu integrasikan APOS ke project dengan file instruksi agent dan state `.apos/` minimum.
+
 ## File
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — instruksi utama untuk coding agent.

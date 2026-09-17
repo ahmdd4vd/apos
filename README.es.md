@@ -125,6 +125,14 @@ Usa **Critical**, **High**, **Medium** y **Low** en lugar de una puntuación num
 9. Prefiere la coherencia sin burocracia innecesaria.
 10. Deja el proyecto comprensible para un nuevo desarrollador.
 
+## Integración de instrucciones del agente
+
+Instalar la skill de APOS no modifica automáticamente el proyecto. Para que los agentes recuerden APOS de forma consistente, intégralo en `AGENTS.md` y/o `CLAUDE.md`.
+
+El flujo completo permanece en [`skill/apos/SKILL.md`](./skill/apos/SKILL.md). En los archivos de instrucciones añade un recordatorio breve y obligatorio para revisar `.apos/`, clasificar la tarea, validar, ejecutar el Finish Protocol, sincronizar el estado y entregar un APOS Report. No copies toda la skill y conserva las instrucciones existentes.
+
+Instalar la skill y adoptar APOS en el proyecto son acciones distintas: primero ejecuta `npx skills add` y después añade o actualiza `AGENTS.md`, `CLAUDE.md` y el estado mínimo de `.apos/`. En un proyecto vacío, hazlo después de aclarar la intención; en uno existente, revisa y conserva primero las instrucciones actuales.
+
 ## Archivos
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — instrucciones principales para el coding agent.

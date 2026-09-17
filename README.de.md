@@ -125,6 +125,14 @@ Verwenden Sie **Critical**, **High**, **Medium** und **Low** statt einer undurch
 9. Bevorzugen Sie Konsistenz ohne unnötige Bürokratie.
 10. Hinterlassen Sie ein für neue Entwickler verständliches Projekt.
 
+## Integration der Agent-Anweisungen
+
+Die Installation des APOS-Skills ändert das Projekt nicht automatisch. Damit Agents APOS zuverlässig beachten, integrieren Sie APOS in `AGENTS.md` und/oder `CLAUDE.md`.
+
+Der vollständige Ablauf bleibt in [`skill/apos/SKILL.md`](./skill/apos/SKILL.md). Ergänzen Sie in den Anweisungsdateien nur eine kurze verpflichtende Erinnerung: `.apos/` prüfen, die Aufgabe klassifizieren, validieren, das Finish Protocol ausführen, den Zustand synchronisieren und einen APOS Report erstellen. Kopieren Sie nicht den gesamten Skill und bewahren Sie bestehende Anweisungen.
+
+Die Skill-Installation und die Einführung von APOS im Projekt sind getrennte Schritte: zuerst `npx skills add` ausführen, danach `AGENTS.md`, `CLAUDE.md` und den minimalen `.apos/`-Zustand hinzufügen oder aktualisieren. Klären Sie bei einem leeren Projekt zuerst die Projektabsicht; prüfen und bewahren Sie bei einem bestehenden Projekt zuerst die vorhandenen Anweisungen.
+
 ## Dateien
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — zentrale Anweisungen für den Coding Agent.

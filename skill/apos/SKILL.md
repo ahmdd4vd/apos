@@ -301,6 +301,40 @@ Adapt this concise format to the change:
 
 For trivial work, omit empty sections. For significant or critical work, include impact analysis, migration or rollback notes, authorization status, and unresolved conflicts.
 
+## Agent Instruction Integration Protocol
+
+When APOS is adopted in a project, make the project’s primary agent instructions remind agents to use APOS. Use `AGENTS.md` for agents that support it and `CLAUDE.md` for Claude-based workflows. Keep the full reusable workflow in `skill/apos/SKILL.md`; do not copy the entire skill into either instruction file.
+
+Add a short, clearly separated section to each applicable file:
+
+```markdown
+## APOS Governance
+
+This project uses APOS for project governance and continuity.
+
+For every non-trivial task:
+1. Inspect the repository and relevant `.apos/` state.
+2. Classify the change and create or update a task when required.
+3. Run proportional validation.
+4. Run the APOS Finish Protocol before reporting completion.
+5. Synchronize affected tasks, decisions, architecture, changelog, or memory.
+6. Provide an APOS Report.
+
+Full workflow: `skill/apos/SKILL.md`
+Project state: `.apos/`
+```
+
+Preserve existing `AGENTS.md` and `CLAUDE.md` instructions. Inspect them first, append an isolated APOS section, and report any conflict rather than silently overwriting or changing project policy. A project may use one or both files; do not create duplicate or contradictory instructions.
+
+Installing the skill and adopting APOS are separate actions:
+
+```text
+Install skill:  npx skills add <skill-url>
+Adopt project:  add or update AGENTS.md, CLAUDE.md, and minimum .apos/ state
+```
+
+For an empty project, add the agent-instruction integration after the project intent is clear and the minimum `.apos/` state is created. For an existing project, preserve and inspect current instruction files before adding APOS. Do not alter a repository merely because a user installed the skill; integrate APOS only when the user adopts it for that project.
+
 ## Skill Package Layout
 
 This skill is distributed from the repository path `skill/apos/SKILL.md`. Keep the skill’s required instructions in that file and keep user-facing documentation in the repository root README files. Do not place README files inside the skill package unless they are required as bundled resources.

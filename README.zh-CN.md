@@ -125,6 +125,14 @@ Task 通常应包含稳定 ID、标题、负责人、状态、优先级、依赖
 9. 保持一致性，同时避免不必要的官僚流程。
 10. 让新开发者也能理解项目。
 
+## Agent 指令集成
+
+安装 APOS skill 不会自动修改项目。为了让 agent 始终记住 APOS，请在项目的 `AGENTS.md` 和/或 `CLAUDE.md` 中加入 APOS 集成说明。
+
+完整流程保留在 [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) 中。指令文件只需要包含简短的强制提醒：检查 `.apos/`、分类任务、执行验证、完成前运行 Finish Protocol、同步受影响的状态并提供 APOS Report。不要复制整个 skill，并保留已有指令。
+
+安装 skill 与在项目中采用 APOS 是两个不同的动作：先运行 `npx skills add`，再添加或更新 `AGENTS.md`、`CLAUDE.md` 和最小 `.apos/` 状态。空项目应在明确项目意图后执行；已有项目应先检查并保留现有指令。
+
 ## 文件
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — coding agent 使用的主要指令。

@@ -235,6 +235,38 @@ Additional directories such as `worktrees/`, `agents/`, and `reports/` are creat
 9. Prefer consistency without unnecessary bureaucracy.
 10. Leave the project understandable to a new developer.
 
+## Agent instruction integration
+
+Installing the APOS skill does not automatically change a project. To make agents consistently remember APOS, adopt it in the project’s agent instruction files.
+
+Keep the full workflow in [`skill/apos/SKILL.md`](./skill/apos/SKILL.md), and add a short mandatory reminder to `AGENTS.md` and/or `CLAUDE.md`:
+
+```markdown
+## APOS Governance
+
+This project uses APOS for project governance and continuity.
+
+For every non-trivial task:
+1. Inspect the repository and relevant `.apos/` state.
+2. Classify the change and create or update a task when required.
+3. Run proportional validation.
+4. Run the APOS Finish Protocol before reporting completion.
+5. Synchronize affected tasks, decisions, architecture, changelog, or memory.
+6. Provide an APOS Report.
+
+Full workflow: `skill/apos/SKILL.md`
+Project state: `.apos/`
+```
+
+Do not copy the entire skill into `AGENTS.md` or `CLAUDE.md`. Preserve existing instructions and append a clearly separated APOS section. For an empty project, create the minimum `.apos/` state and the agent-instruction integration after the project intent is clear. For an existing project, inspect and preserve existing instruction files before adding APOS.
+
+Installing the skill and adopting APOS are separate actions:
+
+```text
+Install skill:  npx skills add <skill-url>
+Adopt project:  add/update AGENTS.md, CLAUDE.md, and minimum .apos/ state
+```
+
 ## Files
 
 - [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — the main instructions loaded by coding agents.
