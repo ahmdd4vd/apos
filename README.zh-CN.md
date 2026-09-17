@@ -2,7 +2,7 @@
 
 [![skills.sh](https://skills.sh/b/ahmdd4vd/apos)](https://skills.sh/b/ahmdd4vd/apos)
 
-[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](https://youtu.be/JedSiPIMITA)
 
 **APOS（AI Project Operating System）** 是一个项目治理 skill，帮助 coding agent 在软件项目中保持连续性。APOS 用于在不同会话之间同步项目上下文、需求、架构、技术决策、任务负责人、变更日志和长期知识。
 
@@ -137,7 +137,7 @@ Task 通常应包含稳定 ID、标题、负责人、状态、优先级、依赖
 
 ## Video overview
 
-Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
+Watch the [APOS overview video](https://youtu.be/JedSiPIMITA) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
 
 

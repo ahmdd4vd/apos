@@ -2,7 +2,7 @@
 
 [![skills.sh](https://skills.sh/b/ahmdd4vd/apos)](https://skills.sh/ahmdd4vd/apos)
 
-[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](https://youtu.be/JedSiPIMITA)
 
 **APOS (AI Project Operating System)** is a project-governance skill that helps coding agents maintain continuity across software projects. APOS keeps project context, requirements, architecture, technical decisions, task ownership, changelogs, and durable knowledge aligned across sessions.
 
@@ -271,7 +271,7 @@ Adopt project:  add/update AGENTS.md, CLAUDE.md, and minimum .apos/ state
 
 ## Video overview
 
-Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow. GitHub renders the thumbnail as the portable playback link for the MP4.
+Watch the [APOS overview video](https://youtu.be/JedSiPIMITA) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow. Click the thumbnail above to watch it on YouTube.
 
 
 
