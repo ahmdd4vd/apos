@@ -19,26 +19,26 @@
 ## Instalasi melalui skills.sh
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
 ```
 
 Perintah ini memasang skill untuk project saat ini. Untuk instalasi global:
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
 ```
 
 Untuk agent tertentu, gunakan `--agent`, misalnya Claude Code:
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
 ```
 
 Untuk melihat skill tanpa memasang atau melakukan instalasi non-interaktif:
 
 ```bash
-npx skills add ahmdd4vd/apos --list
-npx skills add ahmdd4vd/apos --skill apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
 ```
 
 Lihat [dokumentasi skills.sh](https://www.skills.sh/docs) untuk referensi lengkap.
@@ -127,7 +127,7 @@ Gunakan severity **Critical**, **High**, **Medium**, dan **Low**, bukan numeric 
 
 ## File
 
-- [`SKILL.md`](./SKILL.md) — instruksi utama untuk coding agent.
+- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — instruksi utama untuk coding agent.
 - [`README.md`](./README.md) — dokumentasi bahasa Inggris.
 
 ## Status dan lisensi

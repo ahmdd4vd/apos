@@ -19,26 +19,26 @@
 ## Установка через skills.sh
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
 ```
 
 Команда устанавливает навык для текущего проекта. Для глобальной установки:
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
 ```
 
 Чтобы выбрать конкретного агента, используйте `--agent`, например для Claude Code:
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
 ```
 
 Просмотр доступных навыков и неинтерактивная установка:
 
 ```bash
-npx skills add ahmdd4vd/apos --list
-npx skills add ahmdd4vd/apos --skill apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
 ```
 
 Полная информация доступна в [документации skills.sh](https://www.skills.sh/docs).
@@ -127,7 +127,7 @@ Use APOS for this task. Inspect the repository state first, classify the change,
 
 ## Файлы
 
-- [`SKILL.md`](./SKILL.md) — основные инструкции для coding agent.
+- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — основные инструкции для coding agent.
 - [`README.md`](./README.md) — документация на английском языке.
 
 ## Статус и лицензия

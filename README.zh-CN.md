@@ -19,26 +19,26 @@
 ## 通过 skills.sh 安装
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
 ```
 
 上述命令会为当前项目安装 skill。若要全局安装：
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
 ```
 
 若要指定 agent，可以使用 `--agent`，例如 Claude Code：
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
 ```
 
 查看可用 skill 或进行非交互安装：
 
 ```bash
-npx skills add ahmdd4vd/apos --list
-npx skills add ahmdd4vd/apos --skill apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
 ```
 
 完整 CLI 参考请查看 [skills.sh 文档](https://www.skills.sh/docs)。
@@ -127,7 +127,7 @@ Task 通常应包含稳定 ID、标题、负责人、状态、优先级、依赖
 
 ## 文件
 
-- [`SKILL.md`](./SKILL.md) — coding agent 使用的主要指令。
+- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — coding agent 使用的主要指令。
 - [`README.md`](./README.md) — 英文文档。
 
 ## 状态与许可证

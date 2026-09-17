@@ -19,26 +19,26 @@
 ## Instalación mediante skills.sh
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
 ```
 
 El comando instala la skill para el proyecto actual. Para instalarla globalmente:
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
 ```
 
 Para seleccionar un agente concreto, usa `--agent`, por ejemplo para Claude Code:
 
 ```bash
-npx skills add ahmdd4vd/apos --skill apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
 ```
 
 Para listar skills o instalar sin interacción:
 
 ```bash
-npx skills add ahmdd4vd/apos --list
-npx skills add ahmdd4vd/apos --skill apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
 ```
 
 Consulta la [documentación de skills.sh](https://www.skills.sh/docs) para la referencia completa.
@@ -127,7 +127,7 @@ Usa **Critical**, **High**, **Medium** y **Low** en lugar de una puntuación num
 
 ## Archivos
 
-- [`SKILL.md`](./SKILL.md) — instrucciones principales para el coding agent.
+- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — instrucciones principales para el coding agent.
 - [`README.md`](./README.md) — documentación en inglés.
 
 ## Estado y licencia
