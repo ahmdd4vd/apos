@@ -2,69 +2,69 @@
 
 [![skills.sh](https://skills.sh/b/ahmdd4vd/apos)](https://skills.sh/ahmdd4vd/apos)
 
-**APOS (AI Project Operating System)** adalah skill governance untuk membantu coding agent menjaga kesinambungan proyek software. APOS membuat pekerjaan agent lebih terarah dengan memelihara konteks proyek, requirements, arsitektur, keputusan teknis, task ownership, changelog, dan pengetahuan yang perlu bertahan lintas sesi.
+**APOS (AI Project Operating System)** is a project-governance skill that helps coding agents maintain continuity across software projects. APOS keeps project context, requirements, architecture, technical decisions, task ownership, changelogs, and durable knowledge aligned across sessions.
 
-> APOS adalah lapisan panduan dan sinkronisasi proyek. APOS tidak menggantikan coding agent dan tidak membuat perubahan irreversible tanpa otorisasi yang sesuai.
+> APOS is a guidance and synchronization layer. It does not replace the coding agent or perform irreversible actions without the appropriate authorization.
 
-## Fitur utama
+## Key features
 
-- Membaca state repository sebelum pekerjaan non-trivial dimulai.
-- Mengklasifikasikan perubahan berdasarkan risiko: trivial, routine, significant, atau critical.
-- Menjaga keterkaitan antara goals, requirements, tasks, architecture, decisions, changelog, dan memory.
-- Menggunakan workflow proporsional: `READ → ANALYZE → PLAN → EXECUTE → VALIDATE → UPDATE STATE → REPORT`.
-- Mencegah keputusan arsitektur dan dokumentasi diam-diam menyimpang dari implementasi tervalidasi.
-- Mendukung audit kesehatan proyek dan pelaporan drift berdasarkan severity.
-- Menyediakan format laporan akhir yang ringkas dan dapat ditindaklanjuti.
+- Inspects repository state before starting non-trivial work.
+- Classifies changes by risk: trivial, routine, significant, or critical.
+- Keeps goals, requirements, tasks, architecture, decisions, changelogs, and memory connected.
+- Applies a proportional workflow: `READ → ANALYZE → PLAN → EXECUTE → VALIDATE → UPDATE STATE → REPORT`.
+- Helps prevent architecture and documentation from silently drifting away from validated implementation reality.
+- Supports project health audits and severity-based drift reporting.
+- Provides a concise, actionable final-report format.
 
-## Instalasi melalui skills.sh
+## Install through skills.sh
 
-Instal CLI `skills` secara langsung dengan `npx`, lalu tambahkan skill APOS dari repository ini:
+Use `npx` to run the `skills` CLI and add APOS from this repository:
 
 ```bash
 npx skills add ahmdd4vd/apos --skill apos
 ```
 
-Perintah tersebut memasang skill untuk project saat ini. Untuk memasangnya secara global agar tersedia di berbagai project, tambahkan flag `-g`:
+The command installs the skill for the current project. To install it globally so it is available across projects, add the `-g` flag:
 
 ```bash
 npx skills add ahmdd4vd/apos --skill apos -g
 ```
 
-Untuk memilih agent tertentu, gunakan opsi `--agent`. Contoh untuk Claude Code:
+To target a specific agent, use the `--agent` option. For example, for Claude Code:
 
 ```bash
 npx skills add ahmdd4vd/apos --skill apos --agent claude-code
 ```
 
-Untuk melihat skill yang tersedia tanpa memasang:
+To list the skills available in this repository without installing them:
 
 ```bash
 npx skills add ahmdd4vd/apos --list
 ```
 
-Untuk instalasi non-interaktif:
+For non-interactive installation:
 
 ```bash
 npx skills add ahmdd4vd/apos --skill apos -y
 ```
 
-Dokumentasi lengkap tersedia di [skills.sh/docs](https://www.skills.sh/docs).
+See the [skills.sh documentation](https://www.skills.sh/docs) for the complete CLI reference.
 
-## Cara penggunaan
+## Usage
 
-Setelah terpasang, agent akan memuat APOS ketika tugas berkaitan dengan governance dan kesinambungan proyek, misalnya:
+Once installed, an agent can load APOS when a task involves project governance and continuity, such as:
 
-- merencanakan atau mengimplementasikan perubahan software;
-- menyelaraskan dokumentasi dengan code yang tervalidasi;
-- melacak task, ownership, dan keputusan teknis;
-- mengaudit project drift;
-- mengoordinasikan beberapa agent atau worktree.
+- planning or implementing software changes;
+- synchronizing documentation with validated code;
+- tracking tasks, ownership, and technical decisions;
+- auditing project drift; or
+- coordinating multiple agents or worktrees.
 
-Untuk pemakaian manual, sebutkan APOS atau minta agent mengikuti workflow APOS pada prompt. Skill ini akan mengarahkan agent untuk membaca state aktual, memilih proses yang sesuai risiko, memvalidasi hasil, memperbarui artifact yang terdampak, dan membuat laporan akhir.
+For manual use, mention APOS or ask the agent to follow the APOS workflow in your prompt. The skill guides the agent to inspect the actual project state, choose a risk-appropriate process, validate the result, update affected artifacts, and produce a final report.
 
-## Struktur project yang didukung
+## Supported project structure
 
-Jika diperlukan, APOS menggunakan direktori `.apos/` di root repository:
+When needed, APOS uses an `.apos/` directory at the repository root:
 
 ```text
 .apos/
@@ -77,34 +77,33 @@ Jika diperlukan, APOS menggunakan direktori `.apos/` di root repository:
 └── memory/
 ```
 
-Direktori tambahan seperti `worktrees/`, `agents/`, dan `reports/` hanya dibuat ketika benar-benar dibutuhkan. APOS tidak menganjurkan pembuatan struktur administrasi kosong.
+Additional directories such as `worktrees/`, `agents/`, and `reports/` are created only when they are actually needed. APOS does not recommend creating empty administrative structures.
 
-## Prinsip desain
+## Design principles
 
-1. Lindungi intent proyek dan realitas implementasi.
-2. Gunakan proses terkecil yang tetap aman.
-3. Jadikan perubahan material dapat ditelusuri.
-4. Pertahankan keputusan penting.
-5. Jelaskan ownership dan batas tanggung jawab.
-6. Perlakukan perubahan arsitektur sebagai perubahan berisiko.
-7. Buat pengetahuan penting bertahan lintas sesi.
-8. Hindari duplikasi sumber kebenaran.
-9. Utamakan konsistensi tanpa birokrasi yang tidak perlu.
-10. Tinggalkan proyek dalam kondisi yang mudah dipahami developer baru.
+1. Protect project intent and implementation reality.
+2. Use the smallest process that remains safe.
+3. Make material changes traceable.
+4. Preserve important decisions.
+5. Make ownership and responsibility boundaries explicit.
+6. Treat architecture changes as risk-bearing changes.
+7. Make important knowledge survive across sessions.
+8. Avoid duplicating sources of truth.
+9. Prefer consistency without unnecessary bureaucracy.
+10. Leave the project understandable to a new developer.
 
-## File
+## Files
 
-- [`SKILL.md`](./SKILL.md) — instruksi utama yang dibaca oleh coding agent.
-- [`plan.md`](./plan.md) — roadmap pengembangan APOS Beta.
+- [`SKILL.md`](./SKILL.md) — the main instructions loaded by coding agents.
 
 ## Status
 
-APOS saat ini berada pada tahap **Beta / governance skill**. Repository ini berisi skill yang dapat dipasang melalui skills.sh; implementasi API, console, CLI, MCP adapter, dan database APOS mengikuti roadmap di `plan.md`.
+APOS is currently in the **Beta / governance skill** stage. This repository contains the skill that can be installed through skills.sh. The APOS API, console, CLI, MCP adapter, and database implementation are planned separately.
 
-## Kontribusi
+## Contributing
 
-Sebelum mengubah `SKILL.md`, pastikan instruksi tetap singkat, dapat diterapkan lintas repository, dan tidak menduplikasi dokumentasi yang tidak diperlukan agent. Untuk perubahan workflow yang material, perbarui `plan.md` atau catat keputusan teknis yang relevan.
+Before changing `SKILL.md`, keep the instructions concise, broadly applicable across repositories, and free of unnecessary documentation duplication. For material workflow changes, document the relevant technical decision and update the project documentation as needed.
 
-## Lisensi
+## License
 
-Lisensi belum ditetapkan di repository ini.
+A license has not yet been specified for this repository.
