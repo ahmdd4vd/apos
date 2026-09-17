@@ -21,26 +21,26 @@
 ## Instalasi melalui skills.sh
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos
 ```
 
 Perintah ini memasang skill untuk project saat ini. Untuk instalasi global:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -g
 ```
 
 Untuk agent tertentu, gunakan `--agent`, misalnya Claude Code:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --agent claude-code
 ```
 
 Untuk melihat skill tanpa memasang atau melakukan instalasi non-interaktif:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -y
 ```
 
 Lihat [dokumentasi skills.sh](https://www.skills.sh/docs) untuk referensi lengkap.
@@ -131,7 +131,7 @@ Gunakan severity **Critical**, **High**, **Medium**, dan **Low**, bukan numeric 
 
 Instalasi skill APOS tidak otomatis mengubah project. Agar agent selalu mengingat APOS, adopsikan APOS ke file instruksi project seperti `AGENTS.md` dan/atau `CLAUDE.md`.
 
-Simpan workflow lengkap di [`skill/apos/SKILL.md`](./skill/apos/SKILL.md), lalu tambahkan pengingat wajib yang ringkas:
+Simpan workflow lengkap di [`skills/apos/SKILL.md`](./skills/apos/SKILL.md), lalu tambahkan pengingat wajib yang ringkas:
 
 ```markdown
 ## APOS Governance
@@ -146,7 +146,7 @@ For every non-trivial task:
 5. Synchronize affected tasks, decisions, architecture, changelog, or memory.
 6. Provide an APOS Report.
 
-Full workflow: `skill/apos/SKILL.md`
+Full workflow: `skills/apos/SKILL.md`
 Project state: `.apos/`
 ```
 
@@ -160,7 +160,7 @@ Watch the [APOS overview video](https://youtu.be/JedSiPIMITA) to see the reposit
 
 ## File
 
-- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — instruksi utama untuk coding agent.
+- [`skills/apos/SKILL.md`](./skills/apos/SKILL.md) — instruksi utama untuk coding agent.
 - [`README.md`](./README.md) — dokumentasi bahasa Inggris.
 
 ## Status dan lisensi

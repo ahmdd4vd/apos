@@ -303,7 +303,7 @@ For trivial work, omit empty sections. For significant or critical work, include
 
 ## Agent Instruction Integration Protocol
 
-When APOS is adopted in a project, make the project’s primary agent instructions remind agents to use APOS. Use `AGENTS.md` for agents that support it and `CLAUDE.md` for Claude-based workflows. Keep the full reusable workflow in `skill/apos/SKILL.md`; do not copy the entire skill into either instruction file.
+When APOS is adopted in a project, make the project’s primary agent instructions remind agents to use APOS. Use `AGENTS.md` for agents that support it and `CLAUDE.md` for Claude-based workflows. Keep the full reusable workflow in `skills/apos/SKILL.md`; do not copy the entire skill into either instruction file.
 
 Add a short, clearly separated section to each applicable file:
 
@@ -320,7 +320,7 @@ For every non-trivial task:
 5. Synchronize affected tasks, decisions, architecture, changelog, or memory.
 6. Provide an APOS Report.
 
-Full workflow: `skill/apos/SKILL.md`
+Full workflow: `skills/apos/SKILL.md`
 Project state: `.apos/`
 ```
 
@@ -337,7 +337,7 @@ For an empty project, add the agent-instruction integration after the project in
 
 ## Skill Package Layout
 
-This skill is distributed from the repository path `skill/apos/SKILL.md`. Keep the skill’s required instructions in that file and keep user-facing documentation in the repository root README files. Do not place README files inside the skill package unless they are required as bundled resources.
+This skill is distributed from the repository path `skills/apos/SKILL.md`. Keep the skill’s required instructions in that file and keep user-facing documentation in the repository root README files. Do not place README files inside the skill package unless they are required as bundled resources.
 
 ## Principles
 

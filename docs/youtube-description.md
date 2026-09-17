@@ -75,25 +75,25 @@ GitHub: https://github.com/ahmdd4vd/apos
 Install APOS directly into your agent workflow:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos
 ```
 
 Install globally:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -g
 ```
 
 Install for a specific agent:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --agent claude-code
 ```
 
 ## Documentation
 
 - Main README: https://github.com/ahmdd4vd/apos#readme
-- APOS skill instructions: https://github.com/ahmdd4vd/apos/blob/main/skill/apos/SKILL.md
+- APOS skill instructions: https://github.com/ahmdd4vd/apos/blob/main/skills/apos/SKILL.md
 - Project state structure: https://github.com/ahmdd4vd/apos#supported-project-structure
 - Agent integration guide: https://github.com/ahmdd4vd/apos#agent-instruction-integration
 - APOS installation page on skills.sh: https://skills.sh/ahmdd4vd/apos
@@ -113,7 +113,7 @@ npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent cla
 To make agents consistently remember APOS, add a short APOS governance section to `AGENTS.md` and/or `CLAUDE.md` in the project. Keep the complete reusable workflow in:
 
 ```text
-skill/apos/SKILL.md
+skills/apos/SKILL.md
 ```
 
 Keep project-specific state in:

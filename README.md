@@ -23,31 +23,31 @@
 Use `npx` to run the `skills` CLI and add APOS from this repository:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos
 ```
 
 The command installs the skill for the current project. To install it globally so it is available across projects, add the `-g` flag:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -g
 ```
 
 To target a specific agent, use the `--agent` option. For example, for Claude Code:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --agent claude-code
 ```
 
 To list the skills available in this repository without installing them:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --list
 ```
 
 For non-interactive installation:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -y
 ```
 
 See the [skills.sh documentation](https://www.skills.sh/docs) for the complete CLI reference.
@@ -241,7 +241,7 @@ Additional directories such as `worktrees/`, `agents/`, and `reports/` are creat
 
 Installing the APOS skill does not automatically change a project. To make agents consistently remember APOS, adopt it in the project’s agent instruction files.
 
-Keep the full workflow in [`skill/apos/SKILL.md`](./skill/apos/SKILL.md), and add a short mandatory reminder to `AGENTS.md` and/or `CLAUDE.md`:
+Keep the full workflow in [`skills/apos/SKILL.md`](./skills/apos/SKILL.md), and add a short mandatory reminder to `AGENTS.md` and/or `CLAUDE.md`:
 
 ```markdown
 ## APOS Governance
@@ -256,7 +256,7 @@ For every non-trivial task:
 5. Synchronize affected tasks, decisions, architecture, changelog, or memory.
 6. Provide an APOS Report.
 
-Full workflow: `skill/apos/SKILL.md`
+Full workflow: `skills/apos/SKILL.md`
 Project state: `.apos/`
 ```
 
@@ -277,7 +277,7 @@ Watch the [APOS overview video](https://youtu.be/JedSiPIMITA) to see the reposit
 
 ## Files
 
-- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — the main instructions loaded by coding agents.
+- [`skills/apos/SKILL.md`](./skills/apos/SKILL.md) — the main instructions loaded by coding agents.
 
 ## Status
 
@@ -285,7 +285,7 @@ APOS is currently in the **Beta / governance skill** stage. This repository cont
 
 ## Contributing
 
-Before changing `skill/apos/SKILL.md`, keep the instructions concise, broadly applicable across repositories, and free of unnecessary documentation duplication. For material workflow changes, document the relevant technical decision and update the project documentation as needed.
+Before changing `skills/apos/SKILL.md`, keep the instructions concise, broadly applicable across repositories, and free of unnecessary documentation duplication. For material workflow changes, document the relevant technical decision and update the project documentation as needed.
 
 ## License
 

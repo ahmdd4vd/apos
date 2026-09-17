@@ -21,26 +21,26 @@
 ## Установка через skills.sh
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos
 ```
 
 Команда устанавливает навык для текущего проекта. Для глобальной установки:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -g
 ```
 
 Чтобы выбрать конкретного агента, используйте `--agent`, например для Claude Code:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --agent claude-code
 ```
 
 Просмотр доступных навыков и неинтерактивная установка:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -y
 ```
 
 Полная информация доступна в [документации skills.sh](https://www.skills.sh/docs).
@@ -131,7 +131,7 @@ Use APOS for this task. Inspect the repository state first, classify the change,
 
 Установка навыка APOS сама по себе не изменяет проект. Чтобы агенты не забывали использовать APOS, добавьте его в `AGENTS.md` и/или `CLAUDE.md`.
 
-Полный процесс остаётся в [`skill/apos/SKILL.md`](./skill/apos/SKILL.md). В файлы инструкций добавьте краткое обязательное напоминание о проверке `.apos/`, классификации задачи, валидации, Finish Protocol, синхронизации состояния и APOS Report. Не копируйте весь skill и сохраните существующие инструкции.
+Полный процесс остаётся в [`skills/apos/SKILL.md`](./skills/apos/SKILL.md). В файлы инструкций добавьте краткое обязательное напоминание о проверке `.apos/`, классификации задачи, валидации, Finish Protocol, синхронизации состояния и APOS Report. Не копируйте весь skill и сохраните существующие инструкции.
 
 Установка skill и принятие APOS в проекте — разные действия: сначала выполните `npx skills add`, затем добавьте или обновите `AGENTS.md`, `CLAUDE.md` и минимальное состояние `.apos/`. Для пустого проекта сделайте это после определения намерения проекта; для существующего сначала сохраните и проверьте текущие инструкции.
 
@@ -143,7 +143,7 @@ Watch the [APOS overview video](https://youtu.be/JedSiPIMITA) to see the reposit
 
 ## Файлы
 
-- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — основные инструкции для coding agent.
+- [`skills/apos/SKILL.md`](./skills/apos/SKILL.md) — основные инструкции для coding agent.
 - [`README.md`](./README.md) — документация на английском языке.
 
 ## Статус и лицензия

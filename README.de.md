@@ -21,26 +21,26 @@
 ## Installation über skills.sh
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos
 ```
 
 Damit wird der Skill im aktuellen Projekt installiert. Für eine globale Installation:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -g
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -g
 ```
 
 Um einen bestimmten Agent auszuwählen, verwenden Sie `--agent`, zum Beispiel für Claude Code:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --agent claude-code
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --agent claude-code
 ```
 
 Verfügbare Skills anzeigen oder nicht interaktiv installieren:
 
 ```bash
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos --list
-npx skills add https://github.com/ahmdd4vd/apos/tree/main/skill/apos -y
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos --list
+npx skills add https://github.com/ahmdd4vd/apos/tree/main/skills/apos -y
 ```
 
 Die vollständige CLI-Referenz finden Sie in der [skills.sh-Dokumentation](https://www.skills.sh/docs).
@@ -131,7 +131,7 @@ Verwenden Sie **Critical**, **High**, **Medium** und **Low** statt einer undurch
 
 Die Installation des APOS-Skills ändert das Projekt nicht automatisch. Damit Agents APOS zuverlässig beachten, integrieren Sie APOS in `AGENTS.md` und/oder `CLAUDE.md`.
 
-Der vollständige Ablauf bleibt in [`skill/apos/SKILL.md`](./skill/apos/SKILL.md). Ergänzen Sie in den Anweisungsdateien nur eine kurze verpflichtende Erinnerung: `.apos/` prüfen, die Aufgabe klassifizieren, validieren, das Finish Protocol ausführen, den Zustand synchronisieren und einen APOS Report erstellen. Kopieren Sie nicht den gesamten Skill und bewahren Sie bestehende Anweisungen.
+Der vollständige Ablauf bleibt in [`skills/apos/SKILL.md`](./skills/apos/SKILL.md). Ergänzen Sie in den Anweisungsdateien nur eine kurze verpflichtende Erinnerung: `.apos/` prüfen, die Aufgabe klassifizieren, validieren, das Finish Protocol ausführen, den Zustand synchronisieren und einen APOS Report erstellen. Kopieren Sie nicht den gesamten Skill und bewahren Sie bestehende Anweisungen.
 
 Die Skill-Installation und die Einführung von APOS im Projekt sind getrennte Schritte: zuerst `npx skills add` ausführen, danach `AGENTS.md`, `CLAUDE.md` und den minimalen `.apos/`-Zustand hinzufügen oder aktualisieren. Klären Sie bei einem leeren Projekt zuerst die Projektabsicht; prüfen und bewahren Sie bei einem bestehenden Projekt zuerst die vorhandenen Anweisungen.
 
@@ -143,7 +143,7 @@ Watch the [APOS overview video](https://youtu.be/JedSiPIMITA) to see the reposit
 
 ## Dateien
 
-- [`skill/apos/SKILL.md`](./skill/apos/SKILL.md) — zentrale Anweisungen für den Coding Agent.
+- [`skills/apos/SKILL.md`](./skills/apos/SKILL.md) — zentrale Anweisungen für den Coding Agent.
 - [`README.md`](./README.md) — englische Dokumentation.
 
 ## Status und Lizenz
