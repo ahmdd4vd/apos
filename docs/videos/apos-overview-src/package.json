@@ -1,9 +1,0 @@
-{
-  "name": "apos-overview-video",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "hyperframes": "latest",
-    "gsap": "latest"
-  }
-}
