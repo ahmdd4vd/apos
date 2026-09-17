@@ -2,6 +2,8 @@
 
 [![skills.sh](https://skills.sh/b/ahmdd4vd/apos)](https://skills.sh/b/ahmdd4vd/apos)
 
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+
 **APOS (AI Project Operating System)** — это навык управления проектами, который помогает coding agent сохранять непрерывность разработки программного обеспечения. APOS поддерживает согласованность контекста проекта, требований, архитектуры, технических решений, владельцев задач, changelog и долгосрочных знаний между сессиями.
 
 > APOS — это слой рекомендаций и синхронизации. Он не заменяет coding agent и не выполняет необратимые действия без соответствующих полномочий.
@@ -137,12 +139,7 @@ Use APOS for this task. Inspect the repository state first, classify the change,
 
 Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
-  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
-  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
-</video>
 
-[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## Файлы
 

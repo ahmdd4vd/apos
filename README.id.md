@@ -2,6 +2,8 @@
 
 [![skills.sh](https://skills.sh/b/ahmdd4vd/apos)](https://skills.sh/ahmdd4vd/apos)
 
+[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
+
 **APOS (AI Project Operating System)** adalah skill tata kelola proyek yang membantu coding agent menjaga kesinambungan proyek software. APOS menjaga konteks proyek, requirements, arsitektur, keputusan teknis, ownership task, changelog, dan pengetahuan jangka panjang tetap selaras lintas sesi.
 
 > APOS adalah lapisan panduan dan sinkronisasi. APOS tidak menggantikan coding agent dan tidak melakukan tindakan irreversible tanpa otorisasi yang sesuai.
@@ -154,12 +156,7 @@ Jangan menyalin seluruh skill ke `AGENTS.md` atau `CLAUDE.md`. Pertahankan instr
 
 Watch the [APOS overview video](./docs/videos/apos-overview.mp4) to see the repository detection, Bootstrap Protocol, Start Protocol, Finish Protocol, and agent integration flow.
 
-<video controls preload="metadata" poster="./docs/images/apos-overview-thumbnail.png" width="960">
-  <source src="./docs/videos/apos-overview.mp4" type="video/mp4">
-  Your browser does not support embedded video. [Watch or download the MP4](./docs/videos/apos-overview.mp4).
-</video>
 
-[![Watch the APOS overview video](./docs/images/apos-overview-thumbnail.png)](./docs/videos/apos-overview.mp4)
 
 ## File
 
